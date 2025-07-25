@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fintrack-backend-service
+  namespace: default
+spec:
+  selector:
+    app: fintrack-backend
+  ports:
+  - port: 5000
+    targetPort: 5000
+  type: ClusterIP
